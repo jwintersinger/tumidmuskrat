@@ -18,7 +18,7 @@ def list_posts(request):
     posts = paginator.page(paginator.num_pages)
 
   context = {'posts': posts}
-  return render_to_response('blog/index.html', context)
+  return render_to_response('blog/post_list.html', context)
 
 def view_post(request):
   pass
