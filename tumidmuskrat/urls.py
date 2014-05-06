@@ -15,6 +15,6 @@ urlpatterns = patterns('',
     url(r'^summernote/', include('django_summernote.urls')),
 
     url('^$', pages.views.home, name='home'),
-    url('^blog/', blog.views.index, name='blog_index'),
+    url('^blog/', blog.views.list_posts, name='blog_index'),
 # TODO: remove following line in production.
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
