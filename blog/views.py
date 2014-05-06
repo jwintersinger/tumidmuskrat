@@ -2,12 +2,11 @@ from django.shortcuts import render_to_response
 from blog.models import Post
 from django.core import paginator as pgtr
 
-def list_posts(request):
+def list_posts(request, page=1):
   post_list = Post.objects.all()
-  per_page = 10
+  per_page = 2
   paginator = pgtr.Paginator(post_list, per_page)
 
-  page = request.GET.get('page')
   try:
     posts = paginator.page(page)
   except pgtr.PageNotAnInteger:
