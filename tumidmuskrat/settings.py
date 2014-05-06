@@ -85,3 +85,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+SUMMERNOTE_CONFIG = {
+  'iframe': False,
+
+  'toolbar': [
+    ['style', ['style']],
+    ['style', ['bold', 'italic', 'underline', 'strike', 'clear']],
+    ['layout', ['ul', 'ol', 'paragraph']],
+    ['misc', ['fullscreen', 'codeview', 'undo', 'redo']],
+    ['insert', ['picture', 'video', 'link', 'table']],
+    ['help', ['help']],
+  ]
+}
