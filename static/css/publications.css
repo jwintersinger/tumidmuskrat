@@ -1,0 +1,52 @@
+#publications .year {
+  font-size: 28px;
+}
+
+.publication {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.publication .pub-title {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.publication .pub-thumbnail-outer {
+  display: inline-block;
+}
+
+.publication .pub-thumbnail-inner {
+  width: 100%;
+  height: 0;
+  display: block;
+  /* Use padding to set height of container,as this enables us to give it the
+   * same width and height, given that padding is calculated from parent width. */
+  padding-bottom: 100%;
+}
+
+.publication .pub-links {
+  text-align: center;
+}
+
+.publication .journal-link, .publication .pdf-link {
+  color: white;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 60px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.publication .journal-link {
+  background-image: url('../img/journal_icon.png');
+  width: 40px;
+  height: 52px;
+}
+
+.publication .pdf-link {
+  background-image: url('../img/pdf_icon.png');
+  width: 40px;
+  height: 52px;
+}
