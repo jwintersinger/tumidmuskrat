@@ -1,7 +1,8 @@
 from django.contrib import admin
 from blog.models import Post
+from django_summernote.admin import SummernoteModelAdmin
 
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(SummernoteModelAdmin):
   prepopulated_fields = {'slug': ('title',)}
 
   def save_model(self, request, obj, form, change):
