@@ -6,7 +6,7 @@ class PostAdmin(SummernoteModelAdmin):
   prepopulated_fields = {'slug': ('title',)}
 
   def save_model(self, request, obj, form, change):
-    obj.user = request.user
+    obj.author = request.user
     obj.save()
 
 admin.site.register(Post, PostAdmin)
