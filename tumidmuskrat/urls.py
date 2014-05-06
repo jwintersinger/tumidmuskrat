@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 import blog.views
+import pages.views
 
 urlpatterns = patterns('',
     # Examples:
@@ -13,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^summernote/', include('django_summernote.urls')),
 
+    url('^$', pages.views.home, name='home'),
     url('^blog/', blog.views.index, name='blog_index'),
 # TODO: remove following line in production.
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
