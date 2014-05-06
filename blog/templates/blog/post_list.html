@@ -8,7 +8,7 @@
         by <span class="user">{{ post.author }}</span>
       </p>
 
-      {{ post.body }}
+      {{ post.body|safe }}
     </div>
   {% endfor %}
 {% endblock %}
